@@ -14,5 +14,8 @@ pipeline {
                 bat 'docker images'
             }
         }
+        stage('Push'){
+            bat 'docker push demo-jenkins'
+        }
     }
 }
