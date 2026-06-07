@@ -1,18 +1,16 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Checkout'){
-            steps{
-                git 'https://github.com/AKSHAYA1323/demo-jenkins.git'
-            }
-        }
-        stage('Build'){
-            steps{
+
+    stages {
+
+        stage('Build') {
+            steps {
                 bat 'docker build -t demo-jenkins .'
             }
         }
-        stage('show docker images'){
-            steps{
+
+        stage('Show Images') {
+            steps {
                 bat 'docker images'
             }
         }
