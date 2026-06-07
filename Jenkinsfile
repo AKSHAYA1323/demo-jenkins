@@ -15,7 +15,9 @@ pipeline {
             }
         }
         stage('Push'){
-            bat 'docker push demo-jenkins'
+            steps{
+                bat 'docker push demo-jenkins'
+            }
         }
     }
 }
