@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'docker build -t demo-jenkins .'
+                bat 'docker build -t akshaya494/demo-jenkins .'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Push'){
             steps{
-                bat 'docker push demo-jenkins'
+                bat 'docker push akshaya494/demo-jenkins'
             }
         }
     }
